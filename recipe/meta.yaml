@@ -38,11 +38,6 @@ test:
     - pydy.viz
     - pydy.viz.tests
 
-about:
-  home: http://pydy.org
-  license: BSD-3-Clause
-  summary: 'Python tool kit for multi-body dynamics.'
-
 outputs:
   - name: pydy-optional
     version: 0.5.0
@@ -65,6 +60,11 @@ outputs:
       summary: 'A metapackage that installs all required and optional dependencies to run PyDy and its included examples.'
       doc_url: http://pydy.readthedocs.io
       dev_url: http://github.com/pydy/pydy
+
+about:
+  home: http://pydy.org
+  license: BSD-3-Clause
+  summary: 'Python tool kit for multi-body dynamics.'
 
 extra:
     recipe-maintainers:
