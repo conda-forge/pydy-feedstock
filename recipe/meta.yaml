@@ -40,7 +40,7 @@ test:
 
 outputs:
   - name: pydy-optional
-    version: 0.5.0
+    version: {{ version }}
     requirements:
       run:
         - python
