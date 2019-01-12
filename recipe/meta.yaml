@@ -43,6 +43,29 @@ about:
   license: BSD-3-Clause
   summary: 'Python tool kit for multi-body dynamics.'
 
+outputs:
+  - name: pydy-optional
+    version: 0.5.0
+    requirements:
+      run:
+        - python
+        - pydy {{ version }}
+        # Optional dependencies:
+        - notebook 4.*
+        - ipywidgets 4.*
+        - cython >=0.23.4
+        - theano >=0.8.0
+        # Required for examples:
+        - version_information
+        - matplotlib >=1.5.1
+    about:
+      home: http://pydy.org
+      license: BSD 3-Clause
+      license_family: BSD
+      summary: 'A metapackage that installs all required and optional dependencies to run PyDy and its included examples.'
+      doc_url: http://pydy.readthedocs.io
+      dev_url: http://github.com/pydy/pydy
+
 extra:
     recipe-maintainers:
         - moorepants
