@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -64,7 +64,10 @@ outputs:
 about:
   home: http://pydy.org
   license: BSD-3-Clause
+  license_family: BSD
   summary: 'Python tool kit for multi-body dynamics.'
+  doc_url: http://pydy.readthedocs.io
+  dev_url: http://github.com/pydy/pydy
 
 extra:
     recipe-maintainers:
