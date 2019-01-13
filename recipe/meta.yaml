@@ -42,6 +42,17 @@ outputs:
   - name: pydy-optional
     version: {{ version }}
     requirements:
+      run:
+        - python
+        - pydy
+        # Optional dependencies:
+        - notebook
+        - ipywidgets
+        - cython
+        - theano
+        # Required for examples:
+        - version_information
+        - matplotlib
       run_constrained:
         - python
         - pydy {{ version }}
