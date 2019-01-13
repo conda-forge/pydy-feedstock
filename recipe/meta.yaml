@@ -13,12 +13,13 @@ source:
 
 build:
   number: 1001
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
     - python
     - setuptools >=20.7.0
+    - pip
   run:
     - python
     - setuptools >=20.7.0
@@ -26,6 +27,14 @@ requirements:
     - numpy >=1.11.0
     - scipy >=0.17.1
     - pywin32  # [win]
+  run_constrained:
+    # These packages offer enhancements to the code generation and are
+    # optional, but if installed in the same environment as PyDy they should
+    # meet these requirements. Note that I only include the optional
+    # dependencies that are required for "pydy as a library". Once the viz
+    # issues are ironed out, we could potentially add Jupyter notebook here.
+    - cython >=0.23.4
+    - theano >=0.8.0
 
 test:
   imports:
@@ -43,17 +52,6 @@ outputs:
     version: {{ version }}
     requirements:
       run:
-        - python
-        - pydy
-        # Optional dependencies:
-        - notebook
-        - ipywidgets
-        - cython
-        - theano
-        # Required for examples:
-        - version_information
-        - matplotlib
-      run_constrained:
         - python
         - pydy {{ version }}
         # Optional dependencies:
