@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -26,6 +26,14 @@ requirements:
     - numpy >=1.11.0
     - scipy >=0.17.1
     - pywin32  # [win]
+  run_constrained:
+    # These packages offer enhancements to the code generation and are
+    # optional, but if installed in the same environment as PyDy they should
+    # meet these requirements. Note that I only include the optional
+    # dependencies that are required for "pydy as a library". Once the viz
+    # issues are ironed out, we could potentially add Jupyter notebook here.
+    - cython >=0.23.4
+    - theano >=0.8.0
 
 test:
   imports:
@@ -38,10 +46,46 @@ test:
     - pydy.viz
     - pydy.viz.tests
 
+outputs:
+  - name: pydy-optional
+    version: {{ version }}
+    requirements:
+      run:
+        - python
+        - pydy {{ version }}
+        # Optional dependencies:
+        - notebook 4.*
+        - ipywidgets 4.*
+        - cython >=0.23.4
+        - theano >=0.8.0
+        # Required for examples:
+        - version_information
+        - matplotlib >=1.5.1
+    test:
+      imports:
+        - pydy
+        - pydy.codegen
+        - pydy.codegen.tests
+        - pydy.models
+        - pydy.system
+        - pydy.utils
+        - pydy.viz
+        - pydy.viz.tests
+    about:
+      home: http://pydy.org
+      license: BSD 3-Clause
+      license_family: BSD
+      summary: 'A metapackage that installs all required and optional dependencies to run PyDy and its included examples.'
+      doc_url: http://pydy.readthedocs.io
+      dev_url: http://github.com/pydy/pydy
+
 about:
   home: http://pydy.org
   license: BSD-3-Clause
+  license_family: BSD
   summary: 'Python tool kit for multi-body dynamics.'
+  doc_url: http://pydy.readthedocs.io
+  dev_url: http://github.com/pydy/pydy
 
 extra:
     recipe-maintainers:
