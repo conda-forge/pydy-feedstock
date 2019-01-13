@@ -42,7 +42,7 @@ outputs:
   - name: pydy-optional
     version: {{ version }}
     requirements:
-      run:
+      run_constrained:
         - python
         - pydy {{ version }}
         # Optional dependencies:
