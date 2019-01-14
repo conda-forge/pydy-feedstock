@@ -5,11 +5,11 @@ About pydy
 
 Home: http://pydy.org
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: A metapackage that installs all required and optional dependencies to run PyDy and its included examples.
+Summary: Python tool kit for multi-body dynamics.
 
 
 
@@ -25,6 +25,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pydy-green.svg)](https://anaconda.org/conda-forge/pydy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydy.svg)](https://anaconda.org/conda-forge/pydy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydy.svg)](https://anaconda.org/conda-forge/pydy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydy.svg)](https://anaconda.org/conda-forge/pydy) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydy--optional-green.svg)](https://anaconda.org/conda-forge/pydy-optional) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydy-optional.svg)](https://anaconda.org/conda-forge/pydy-optional) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydy-optional.svg)](https://anaconda.org/conda-forge/pydy-optional) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydy-optional.svg)](https://anaconda.org/conda-forge/pydy-optional) |
 
 Installing pydy
@@ -36,16 +37,16 @@ Installing `pydy` from the `conda-forge` channel can be achieved by adding `cond
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `pydy-optional` can be installed with:
+Once the `conda-forge` channel has been enabled, `pydy, pydy-optional` can be installed with:
 
 ```
-conda install pydy-optional
+conda install pydy pydy-optional
 ```
 
-It is possible to list all of the versions of `pydy-optional` available on your platform with:
+It is possible to list all of the versions of `pydy` available on your platform with:
 
 ```
-conda search pydy-optional --channel conda-forge
+conda search pydy --channel conda-forge
 ```
 
 
