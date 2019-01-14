@@ -47,6 +47,7 @@ test:
     - pydy.viz.tests
 
 outputs:
+  - name: pydy
   - name: pydy-optional
     version: {{ version }}
     requirements:
