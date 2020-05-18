@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1003
+  number: 1004
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -62,7 +62,7 @@ outputs:
         - theano >=0.8.0
         # Required for examples:
         - version_information
-        - matplotlib >=1.5.1
+        - matplotlib-base >=1.5.1
     test:
       imports:
         - pydy
