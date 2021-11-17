@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1003
+  number: 1004
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -76,6 +76,7 @@ outputs:
     about:
       home: http://pydy.org
       license: BSD 3-Clause
+      license_file: LICENSE.txt
       license_family: BSD
       summary: 'A metapackage that installs all required and optional dependencies to run PyDy and its included examples.'
       doc_url: http://pydy.readthedocs.io
