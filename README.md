@@ -31,6 +31,13 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
+              <td>linux_64_python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=859&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pydy-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_64_python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=859&branchName=master">
@@ -52,6 +59,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=859&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pydy-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=859&branchName=master">
@@ -70,6 +84,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=859&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pydy-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=859&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pydy-feedstock?branchName=master&jobName=win&configuration=win_64_python3.10.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -107,7 +128,6 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pydy-green.svg)](https://anaconda.org/conda-forge/pydy) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydy.svg)](https://anaconda.org/conda-forge/pydy) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydy.svg)](https://anaconda.org/conda-forge/pydy) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydy.svg)](https://anaconda.org/conda-forge/pydy) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pydy--optional-green.svg)](https://anaconda.org/conda-forge/pydy-optional) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pydy-optional.svg)](https://anaconda.org/conda-forge/pydy-optional) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pydy-optional.svg)](https://anaconda.org/conda-forge/pydy-optional) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pydy-optional.svg)](https://anaconda.org/conda-forge/pydy-optional) |
 
 Installing pydy
 ===============
@@ -119,10 +139,10 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pydy, pydy-optional` can be installed with:
+Once the `conda-forge` channel has been enabled, `pydy` can be installed with:
 
 ```
-conda install pydy pydy-optional
+conda install pydy
 ```
 
 It is possible to list all of the versions of `pydy` available on your platform with:
