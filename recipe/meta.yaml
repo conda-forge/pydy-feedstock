@@ -84,6 +84,7 @@ outputs:
 about:
   home: http://pydy.org
   license: BSD-3-Clause
+  license_file: LICENSE.txt
   license_family: BSD
   summary: 'Python tool kit for multi-body dynamics.'
   doc_url: http://pydy.readthedocs.io
