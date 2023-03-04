@@ -1,6 +1,6 @@
 {% set name = "pydy" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "7bf4ac7dde65962a00edc70b50b951747475d7721b478009e3f1e6cd0b94eef2" %}
+{% set version = "0.7.1" %}
+{% set sha256 = "69a4629c930647cbff39591e4a9d61038f902ceae60d6ab9d30bc0e9bfecbaf9" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -89,10 +89,10 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE.txt
   license_family: BSD
-  summary: 'Python tool kit for multi-body dynamics.'
+  summary: Python tool kit for multi-body dynamics.
   doc_url: http://pydy.readthedocs.io
   dev_url: http://github.com/pydy/pydy
 
 extra:
-    recipe-maintainers:
-        - moorepants
+  recipe-maintainers:
+    - moorepants
