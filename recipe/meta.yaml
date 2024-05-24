@@ -12,21 +12,22 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . -vv --no-deps
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - setuptools >=44.0.0
     - pip
   run:
-    - python
+    - python >=3.7
     - setuptools >=44.0.0
     - sympy >=1.5.1
     - numpy >=1.16.5
     - scipy >=1.3.3
-    - pywin32  # [win]
+    - pywin32-on-windows
   run_constrained:
     # These packages offer enhancements to the code generation and are
     # optional, but if installed in the same environment as PyDy they should
