@@ -1,6 +1,6 @@
 {% set name = "pydy" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "1b78aa333cbf5b772dcff7384f72ea6324d33156e5cb518c92630b8bdea6ccc7" %}
+{% set version = "0.9.4" %}
+{% set sha256 = "c09fe6c68715d7686cb10a9829a48366d2d06c3124a3f6ed0f30a65dfd6524ea" %}
 
 package:
   name: {{ name|lower }}
