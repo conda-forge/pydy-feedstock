@@ -19,15 +19,15 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=44.1.1
+    - setuptools >=68.1.2
     - pip
   run:
-    - packaging >=21.3
+    - packaging >=24.0
     - python >={{ python_min }}
-    - setuptools >=44.1.1
-    - sympy >=1.9
-    - numpy >=1.21.5
-    - scipy >=1.8.0
+    - setuptools >=68.1.2
+    - sympy >=1.12
+    - numpy >=1.26.4
+    - scipy >=1.11.4
     - pywin32-on-windows
   run_constrained:
     # These packages offer enhancements to the code generation and are
@@ -35,9 +35,11 @@ requirements:
     # meet these requirements. Note that I only include the optional
     # dependencies that are required for "pydy as a library". Once the viz
     # issues are ironed out, we could potentially add Jupyter notebook here.
-    - cython >=0.29.28
+    - cython >=0.29.37
     - theano >=1.0.5
-    - matplotlib >=3.5.1
+    - matplotlib >=3.6.3
+    - symjit >=2.5.0
+    - pythreejs >=2.4.2
 
 test:
   requires:
@@ -53,7 +55,7 @@ test:
     - pydy.viz.tests
 
 about:
-  home: http://pydy.org
+  home: https://pydy.org
   license: BSD-3-Clause
   license_file: LICENSE.txt
   license_family: BSD
